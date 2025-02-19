@@ -20,7 +20,6 @@ export default function Home() {
                 <span className="word bg-gradient-to-r from-[#7B00FF] to-[#5246FF] bg-clip-text text-transparent">Front-End</span>
                 <span className="word bg-gradient-to-r from-[#7B00FF] to-[#5246FF] bg-clip-text text-transparent">Full-Stack</span>
                 <span className="word bg-gradient-to-r from-[#7B00FF] to-[#5246FF] bg-clip-text text-transparent">UX/UI</span>
-                <span className="word bg-gradient-to-r from-[#7B00FF] to-[#5246FF] bg-clip-text text-transparent">Julliana</span>
               </div>
             </div>
             {/* <h2 className="font-semibold text-4xl ">Desenvolvedor <a href="" className="bg-gradient-to-r from-[#7B00FF] to-[#5246FF] bg-clip-text text-transparent cursor-default">Full-Stack</a></h2> */}
