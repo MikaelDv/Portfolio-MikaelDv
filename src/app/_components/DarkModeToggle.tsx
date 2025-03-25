@@ -1,10 +1,10 @@
 "use client"
 import React from 'react'
 import Image from "next/image";
-import { useTheme } from '../context/ThemeProvider'
+import { useTheme } from '../_context/ThemeProvider'
 
 export default function DarkModeToggle() {
-    const { darkMode, toggleDarkMode } = useTheme();
+    const { toggleDarkMode } = useTheme();
 
     return (
         <button onClick={toggleDarkMode}>

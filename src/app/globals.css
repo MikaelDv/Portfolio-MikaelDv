@@ -18,6 +18,10 @@ body {
 }
 
 @layer components {
+  .gradient-bar {
+    border-image: linear-gradient(90deg,#5246FF, #7B00FF) 1;
+  }
+
   .loader {
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
@@ -98,6 +102,33 @@ body {
     100% {
       transform: translateY(0);
     }
-  }  
+  } 
+  
+  .button-landing {
+    position: relative;
+    padding: 10px 30px;
+    background-color: #f1f1f1;
+    border-radius: 12px;
+    display: inline-block;
+    z-index: 1;
+  }
+
+  .dark .button-landing {
+    background-color: var(--bg-color);
+  }
+
+  .button-landing::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 12px;
+      padding: 3px;
+      background: linear-gradient(90deg, #5246FF, #7B00FF);
+      mask: linear-gradient(white 0 0) content-box, linear-gradient(white 0 0);
+      -webkit-mask: linear-gradient(white 0 0) content-box, linear-gradient(white 0 0);
+      -webkit-mask-composite: destination-out;
+      mask-composite: exclude;
+      z-index: -1;
+  }
 }
 
