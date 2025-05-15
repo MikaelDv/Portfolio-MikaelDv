@@ -4,17 +4,56 @@
 @tailwind utilities;
 
 :root {
-  --bg-color: #131313
+  --text-color: #131313;
+  --bg-color: #f1f1f1;
+  --glassFrom: rgba(255,255,255,0.1);
+  --glassTo: rgba(255,255,255,0.225);
 }
 
+
+:root.dark {
+  --bg-color: #131313;
+  --text-color: #FFF;
+  --glassFrom: rgba(0,0,0,0.2);
+  --glassTo: rgba(0,0,0,0.225);
+}
+
+* {
+  @apply scroll-smooth;
+}
+
+
 body {
-  color: #101010;
-  background: #f1f1f1;
+  color: var(--text-color);
+  background: var(--bg-color);
   font-family: "Source Code Pro", serif;
 }
 
-.dark body {
-  @apply bg-[#131313] text-white
+.glass-header {
+  border-radius: 1em;
+  border: 1px solid rgba(255,255,255,0);
+  transition: all 0.3s ease-in;
+}
+
+.glass-header.scrolled{
+  background: linear-gradient(135deg, var(--glassFrom), var(--glassTo));
+  backdrop-filter: blur(1em);
+  -webkit-backdrop-filter: blur(1em);
+  border-radius: 1em;
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 4px 32px 0 rgba(0,0,0,0.17);
+}
+
+.dark .footer-top {
+  @apply text-[#C4C4C4]
+}
+
+.dark .footer {
+  @apply text-white
+}
+
+.dark .copy{
+  @apply text-[#D4D4D4]
 }
 
 @layer components {
@@ -106,7 +145,7 @@ body {
   
   .button-landing {
     position: relative;
-    padding: 10px 30px;
+    padding: 10px 20px;
     background-color: #f1f1f1;
     border-radius: 12px;
     display: inline-block;
