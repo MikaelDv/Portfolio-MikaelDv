@@ -1,12 +1,31 @@
 "use client";
 
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { useTheme } from '../_context/ThemeProvider';
 
 export default function Footer() {
     const darkMode = useTheme().darkMode; 
+
+    const [ linkedin, setLikedin ] = useState<"dark-linkedin.svg" | "linkedin.svg">("dark-linkedin.svg");
+    const [ github, setGithub ] = useState<"dark-github2.svg" | "github2.svg">("dark-github2.svg");
+    const [ email, setEmail] = useState<"dark-email.svg" | "email.svg">("dark-email.svg");
+    const [ arrowUp, setArrowUp] = useState<"dark-arrow-up.svg"| "arrow-up.svg">("dark-arrow-up.svg");
+    
+    useEffect(() => {
+        if (darkMode) {
+            setLikedin("linkedin.svg");
+            setGithub("github2.svg");
+            setEmail("email.svg");
+            setArrowUp("dark-arrow-up.svg")
+        } else {
+            setLikedin("dark-linkedin.svg");
+            setGithub("dark-github2.svg");
+            setEmail("dark-email.svg");
+            setArrowUp("arrow-up.svg")
+        }
+    }, [darkMode]);
 
     return (
         <div className='font-[Sora] h-[40vh] w-full flex flex-col items-center justify-between pb-6 pt-24 text-[#101010] footer' id="contato">
@@ -18,20 +37,20 @@ export default function Footer() {
                 <div className='flex flex-col gap-5 items-center'>
                     <div className='flex gap-6'>
                         <Link href={"https://www.linkedin.com/in/mikael-sanches"} target='_blank'>
-                            <Image alt='linkedin icon' src={`/${!darkMode ? "dark-" : ""}linkedin.svg`} width={64} height={64}/>
+                            <Image alt='linkedin icon' src={linkedin} width={64} height={64}/>
                         </Link>
                         <Link href={"https://www.github.com/MikaelDv"} target='_blank'>
-                            <Image alt='github icon' src={`/${!darkMode ? "dark-" : ""}github2.svg`} width={64} height={64}/>
+                            <Image alt='github icon' src={github} width={64} height={64}/>
                         </Link>
                         <Link href={"mailto:mikaelsanchesdev@gmail.com"} target='_blank'>
-                            <Image alt='email icon' src={`/${!darkMode ? "dark-" : ""}email.svg`} width={64} height={64}/>
+                            <Image alt='email icon' src={email} width={64} height={64}/>
                         </Link>
                     </div>
                     <Link href={"#main"}>
                         <div>
                             <button className='flex gap-[6px]'>
                                 <p className='text-base font-normal footer-top'>Voltar ao topo</p>
-                                <Image alt='arrow up' src={`/${!darkMode ? "" : "dark-"}arrow-up.svg`} width={12} height={12}/>
+                                <Image alt='arrow up' src={arrowUp} width={12} height={12}/>
                             </button>
                         </div>
                     </Link> 

@@ -6,13 +6,14 @@ export async function GET() {
     try {
         const filePath = path.join(process.cwd(), 'public', 'Curriculo-Mikael.pdf');
         const fileBuffer = fs.readFileSync(filePath);
+        const uint8Array = new Uint8Array(fileBuffer);
 
-        return new NextResponse(fileBuffer, {
+        return new NextResponse(uint8Array, {
             status: 200,
             headers: {
                 'Content-Type': 'application/pdf',
                 'Content-Disposition': 'attachment; filename=Curriculo-Mikael.pdf',
-                'Content-Length': fileBuffer.length,
+                'Content-Length': fileBuffer.length.toString(),
             },
         });
     } catch (error) {
