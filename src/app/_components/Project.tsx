@@ -20,6 +20,7 @@ import SpringIcon from '../_svg/stack/SpringIcon'
 import SqlIcon from '../_svg/stack/SqlIcon'
 import TailwindIcon from '../_svg/stack/TailwindIcon'
 import OracleIcon from '../_svg/stack/OracleIcon'
+import PythonIcon from '../_svg/stack/PythonIcon'
 
 interface Project {
   id: number
@@ -111,6 +112,10 @@ function getTechIcon(tech: string) {
     case "prisma":
       return (
         <PrismaIcon className={commonProps} />
+      )
+    case "python":
+      return (
+        <PythonIcon className={commonProps}/>
       )
     case "react":
       return (

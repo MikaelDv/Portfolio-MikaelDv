@@ -33,6 +33,7 @@ enum Technology {
   php
   postgresql
   prisma
+  python
   react
   sass
   spring

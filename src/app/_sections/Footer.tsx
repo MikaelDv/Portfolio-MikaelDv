@@ -37,7 +37,7 @@ export default function Footer() {
               <Linkedin/>
             </Link>
             <Link href={"https://www.github.com/MikaelDv"} target="_blank" className="flex justify-center items-center w-16 bg-[--text-color] rounded-xl">
-              <Github/>
+              <Github color="var(--bg-color)"/>
             </Link>
             <Link href={"mailto:mikaelsanchesdev@gmail.com"} target="_blank" className="flex justify-center items-center w-16 bg-[--text-color] rounded-xl">
               <Email/>

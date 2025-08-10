@@ -2,6 +2,8 @@
 import React from 'react'
 import Image from "next/image";
 import Link from 'next/link';
+import Github from '../_svg/icons/Github';
+import Save from '../_svg/icons/Save';
 
 export default function Main() {
   const handleDownload = async () => {
@@ -54,12 +56,12 @@ export default function Main() {
 
         <div className="font-['Sora'] text-base sm:text-lg md:text-xl font-normal flex flex-col gap-3 w-full max-w-sm sm:max-w-md lg:max-w-none">
           <button className="button-landing w-full sm:w-64 lg:w-[21%] flex items-center justify-center gap-3 lg:gap-[14%]" onClick={handleDownload}>
-            <Image src={"/save.svg"} alt="save icon" height={25} width={25}/>
+            <Save color="var(--text-color)" height={25} width={25}/>
             Currículo
           </button>
           <Link href={"https://github.com/MikaelDv"} target="_blank">
             <button className="button-landing w-full sm:w-64 lg:w-[21%] flex items-center justify-center gap-3 lg:gap-[14%]">
-              <Image src={"/github.svg"} alt="github icon" height={25} width={25}/>
+              <Github color="var(--text-color)" height={25} width={25}/>
               GitHub
             </button>
           </Link>

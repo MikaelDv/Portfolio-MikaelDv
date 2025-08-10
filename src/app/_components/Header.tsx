@@ -63,7 +63,7 @@ export default function Header() {
             ) : (
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6">
                 <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                <g id="SVGRepo_tracerCarrier" strokeLinecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
                 <g id="SVGRepo_iconCarrier"> 
                   <path d="M4 18L20 18" stroke="var(--text-color)" strokeWidth="2" strokeLinecap="round"></path> 
                   <path d="M4 12L20 12" stroke="var(--text-color)" strokeWidth="2" strokeLinecap="round"></path> 
