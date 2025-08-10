@@ -81,8 +81,8 @@ export default function Header() {
                       ${open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}
         >
           <ul className="flex flex-col gap-4 py-4 text-base">
-            <li><Link href={""} onClick={() => setOpen(false)}>{"<Projetos/>"}</Link></li>
-            <li><Link href={""} onClick={() => setOpen(false)}>{"<Sobre/>"}</Link></li>
+            <li><Link href={"#projects"} onClick={() => setOpen(false)}>{"<Projetos/>"}</Link></li>
+            <li><Link href={"#sobre"} onClick={() => setOpen(false)}>{"<Sobre/>"}</Link></li>
             <li><Link href={"#contato"} onClick={() => setOpen(false)}>{"<Contato/>"}</Link></li>
             <li><DarkModeToggle/></li>
           </ul>

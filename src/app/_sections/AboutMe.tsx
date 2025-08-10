@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function AboutMe() {
   return (
-    <div className="flex flex-col justify-center py-16 lg:py-0 min-h-screen">
+    <div className="flex flex-col justify-center py-16 lg:py-0 min-h-screen" id="sobre">
       <h1 className="font-[Sora] font-semibold text-4xl sm:text-5xl text-center">Sobre mim</h1>
       
       <div className="flex flex-col xl:flex-row justify-center items-center gap-12 lg:gap-28 mt-10 lg:mt-16 px-4 sm:px-8">
