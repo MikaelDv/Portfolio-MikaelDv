@@ -44,6 +44,21 @@ body {
   box-shadow: 0 4px 32px 0 rgba(0,0,0,0.17);
 }
 
+@media screen and (max-width: 762px) {
+  /* precisa sobrescrever AMBOS: estado normal e .scrolled */
+  .glass-header,
+  .glass-header.scrolled {
+    transition: all 0.3s ease-in;
+    background: linear-gradient(135deg, var(--glassFrom), var(--glassTo));
+    backdrop-filter: blur(1em);
+    -webkit-backdrop-filter: blur(1em);
+
+    /* remove o “cartão” no mobile */
+    border-radius: 0 !important;
+    border: 0 !important;
+  }
+}
+
 .dark .footer-top {
   @apply text-[#C4C4C4]
 }

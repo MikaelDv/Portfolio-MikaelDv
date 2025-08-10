@@ -31,7 +31,7 @@ export default function Projects() {
   }, [])
 
   return (
-    <div>
+    <div className="mt-12 md:px-4 px-2">
       <h1 className="font-[Sora] font-semibold text-5xl text-center">Projetos</h1>
       <div className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto px-4 mt-16">
         {projetos.map((projeto) => (
