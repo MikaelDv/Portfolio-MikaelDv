@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react'
-import Image from 'next/image';
+import Project from '../_components/Project';
 
 type Projeto = {
   id: number
@@ -32,15 +32,14 @@ export default function Projects() {
 
   return (
     <div>
-      <h1>Projetos</h1>
-      <ul>
+      <h1 className="font-[Sora] font-semibold text-5xl text-center">Projetos</h1>
+      <div className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto px-4 mt-16">
         {projetos.map((projeto) => (
-          <li key={projeto.id}>
-            <strong>{projeto.titulo}</strong>: {projeto.descricao}
-            <Image alt='a' src={projeto.imagemUrl} width={100} height={100}/>
-          </li>
+          <div key={projeto.id} className="min-w-[300px] max-w-[400px] flex-1">
+            <Project  projeto={projeto} />
+          </div>
         ))}
-      </ul>
-    </div>
+      </div>
+    </div>  
   )
 }

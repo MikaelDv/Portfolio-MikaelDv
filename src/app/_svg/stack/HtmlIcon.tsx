@@ -1,0 +1,9 @@
+import React from 'react'
+
+export default function HtmlIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="71" height="81" viewBox="0 0 71 81" fill="none" {...props}>
+        <path d="M0.710571 0.740723H70.2893L63.9609 72.1848L35.4237 80.2592L7.04886 72.1815L0.710571 0.740723ZM24.0062 33.0451L23.2375 24.0396L56.5657 24.0496L57.3278 15.3622L13.6721 15.3522L15.9848 41.8916H46.2217L45.1415 53.2428L35.4999 55.9067L25.7092 53.2229L25.0863 46.2319H16.442L17.5354 60.0516L35.4999 64.8558L53.322 60.0748L55.7871 33.0484H24.0062V33.0451Z" fill="var(--text-color)"/>
+    </svg>
+  )
+}

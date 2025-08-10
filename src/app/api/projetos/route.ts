@@ -13,11 +13,10 @@ export async function GET() {
         const projetos = await prisma.projeto.findMany();
 
         return NextResponse.json(projetos, { status: 200 })
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    } catch (error: any) {
+    } catch (error: unknown) {
         console.error('[GET ERROR]', error)
         return NextResponse.json(
-            { error: 'Erro ao buscar projetos.', detalhe: error?.message },
+            { error: 'Erro ao buscar projetos.', detalhe: error instanceof Error ? error.message : String(error) },
             { status: 500 }
         )
     }

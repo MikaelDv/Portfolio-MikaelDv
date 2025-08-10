@@ -12,8 +12,31 @@ model Projeto {
   id          Int      @id @default(autoincrement())
   titulo      String
   descricao   String
-  tecnologias String[]
+  tecnologias Technology[]
   imagemUrl   String
   linkProjeto String
   linkCodigo  String
+}
+
+enum Technology {
+  css
+  elixir
+  figma
+  html
+  java
+  js
+  kotlin
+  mongo
+  next
+  node
+  oracle
+  php
+  postgresql
+  prisma
+  react
+  sass
+  spring
+  sql
+  tailwind
+  ts
 }
