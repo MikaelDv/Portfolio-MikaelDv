@@ -36,8 +36,8 @@ export default function Header() {
           {/* Menu desktop (inalterado) */}
           <div className='hidden lg:block'>
             <ul className='flex items-center gap-11 font-normal 2xl:text-xl xl:text-lg lg:text-base md:text-sm sm:text-xs'>
-              <Link href={""}><li>{"<Projetos/>"}</li></Link>
-              <Link href={""}><li>{"<Sobre/>"}</li></Link>
+              <Link href={"#projects"}><li>{"<Projetos/>"}</li></Link>
+              <Link href={"#sobre"}><li>{"<Sobre/>"}</li></Link>
               <Link href={"#contato"}><li>{"<Contato/>"}</li></Link>
               <DarkModeToggle/>
             </ul>
