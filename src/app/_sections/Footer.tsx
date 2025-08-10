@@ -6,21 +6,17 @@ import Image from 'next/image'
 import { useTheme } from '../_context/ThemeProvider';
 import Github from '../_svg/icons/Github';
 import Linkedin from '../_svg/icons/Linkedin';
-import Email from '../_svg/icons/email';
+import Email from '../_svg/icons/Email';
 
 export default function Footer() {
   const darkMode = useTheme().darkMode; 
-
-  const [ linkedin, setLikedin ] = useState<"dark-linkedin.svg" | "linkedin.svg">("dark-linkedin.svg");
-  const [ github, setGithub ] = useState<"dark-github2.svg" | "github2.svg">("dark-github2.svg");
-  const [ email, setEmail] = useState<"dark-email.svg" | "email.svg">("dark-email.svg");
   const [ arrowUp, setArrowUp] = useState<"dark-arrow-up.svg"| "arrow-up.svg">("dark-arrow-up.svg");
     
   useEffect(() => {
     if (darkMode) {
-      setLikedin("linkedin.svg"); setGithub("github2.svg"); setEmail("email.svg"); setArrowUp("dark-arrow-up.svg");
+      setArrowUp("dark-arrow-up.svg");
     } else {
-      setLikedin("dark-linkedin.svg"); setGithub("dark-github2.svg"); setEmail("dark-email.svg"); setArrowUp("arrow-up.svg");
+      setArrowUp("arrow-up.svg");
     }
   }, [darkMode]);
 
