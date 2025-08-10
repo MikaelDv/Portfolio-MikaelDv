@@ -4,6 +4,9 @@ import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { useTheme } from '../_context/ThemeProvider';
+import Github from '../_svg/icons/Github';
+import Linkedin from '../_svg/icons/Linkedin';
+import Email from '../_svg/icons/email';
 
 export default function Footer() {
   const darkMode = useTheme().darkMode; 
@@ -33,15 +36,15 @@ export default function Footer() {
 
         {/* Núcleo (embaixo no mobile, direita no desktop) */}
         <div className="flex flex-col gap-5 items-center">
-          <div className="flex gap-6">
-            <Link href={"https://www.linkedin.com/in/mikael-sanches"} target="_blank">
-              <Image alt="linkedin icon" src={linkedin} width={64} height={64} className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16"/>
+          <div className="flex gap-4 h-16">
+            <Link href={"https://www.linkedin.com/in/mikael-sanches"} target="_blank" className="flex justify-center items-center w-16 bg-[--text-color] rounded-xl">
+              <Linkedin/>
             </Link>
-            <Link href={"https://www.github.com/MikaelDv"} target="_blank">
-              <Image alt="github icon" src={github} width={64} height={64} className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16"/>
+            <Link href={"https://www.github.com/MikaelDv"} target="_blank" className="flex justify-center items-center w-16 bg-[--text-color] rounded-xl">
+              <Github/>
             </Link>
-            <Link href={"mailto:mikaelsanchesdev@gmail.com"} target="_blank">
-              <Image alt="email icon" src={email} width={64} height={64} className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16"/>
+            <Link href={"mailto:mikaelsanchesdev@gmail.com"} target="_blank" className="flex justify-center items-center w-16 bg-[--text-color] rounded-xl">
+              <Email/>
             </Link>
           </div>
 
